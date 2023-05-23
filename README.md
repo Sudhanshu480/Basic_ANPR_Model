@@ -6,7 +6,7 @@ The fundamental model presented here is designed to recognize and extract number
 
 Subsequently, a series of intuitive procedures are employed. These include noise cancellation and edge detection using the cv2.bilateralFilter() and cv2.Canny() functions, respectively. Contour detection is then utilized, wherein ten contours are selected and sorted in descending order.
 
-Further filtering is applied to identify contours consisting of precisely four points, as number plates typically possess a rectangular shape defined by four corners. The contour coordinates are extracted and employed to create a mask using numpy and cv2 techniques.
+Further filtering is applied to identify contours consisting of exactly four points, as number plates typically possess a rectangular shape defined by four corners. The contour coordinates are extracted and employed to create a mask using numpy and cv2 techniques.
 
 The final step involves reading the text from the number plate. To facilitate this process, the number plate is first cropped to isolate it. Then, by utilizing the easyocr library, the text on the number plate is extracted, yielding the desired outcome along with a confidence measure.
 
